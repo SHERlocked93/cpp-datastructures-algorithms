@@ -27,3 +27,22 @@ std::string int2str(const std::vector<T>& vec, bool withSpace = true) {
   }
   return ss.str();
 }
+
+template <typename T>
+std::string int2str(const std::vector<T>& vec, int len, bool withSpace = true) {
+  std::stringstream ss;
+  for (int i = 0; i < len; i++) {
+    ss << static_cast<int>(vec[i]);
+    if (withSpace) ss << " ";
+  }
+  return ss.str();
+}
+
+template <typename T>
+struct TreeNode {
+  T val;
+  TreeNode* left = nullptr;
+  TreeNode* right = nullptr;
+
+  TreeNode(T v_) : val(v_) {}
+};
