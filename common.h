@@ -39,10 +39,19 @@ std::string int2str(const std::vector<T>& vec, int len, bool withSpace = true) {
 }
 
 template <typename T>
-struct TreeNode {
+struct CTreeNode {
   T val;
-  TreeNode* left = nullptr;
-  TreeNode* right = nullptr;
+  CTreeNode* left = nullptr;
+  CTreeNode* right = nullptr;
 
-  TreeNode(T v_) : val(v_) {}
+  explicit CTreeNode(T v_) : val(v_) {}
 };
+
+template <typename T>
+struct CListNode {
+  T val;
+  CListNode* next = nullptr;
+
+  explicit CListNode(T v_) : val(v_) {}
+};
+

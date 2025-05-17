@@ -19,8 +19,8 @@ struct ListNode {
 };
 
 ListNode* removeElements(ListNode* head, int val) {
-  auto dummy = ListNode(0, head);
-  auto curr = &dummy;
+  auto vhead = ListNode(0, head);
+  auto curr = &vhead;
 
   while (curr->next != nullptr) {
     if (curr->next->val == val) {
@@ -31,7 +31,7 @@ ListNode* removeElements(ListNode* head, int val) {
       curr = curr->next;
   }
 
-  return dummy.next;
+  return vhead.next;
 }
 
 int main() {
