@@ -9,7 +9,7 @@
 
 using namespace std;
 
-void quickSo(vector<int>& arr, int left, int right) {
+void mergeSort(vector<int>& arr, int left, int right) {
   if (right <= left) return;
 
   int i = left, j = right;
@@ -20,14 +20,14 @@ void quickSo(vector<int>& arr, int left, int right) {
   }
   swap(arr[left], arr[i]);
 
-  quickSo(arr, left, i - 1);
-  quickSo(arr, i + 1, right);
+  mergeSort(arr, left, i - 1);
+  mergeSort(arr, i + 1, right);
 }
 
 vector<int> quickSort(const vector<int>& vec) {
   vector<int> res(vec.begin(), vec.end());
 
-  quickSo(res, 0, res.size() - 1);
+  mergeSort(res, 0, res.size() - 1);
 
   return res;
 }
