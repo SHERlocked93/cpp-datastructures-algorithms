@@ -15,7 +15,8 @@ int jump(vector<int>& nums) {
   }
   int minstep = 0;
   for (int i = 0; i < numAble.size() - 1; i++) {
-    if (numAble[i] >= nums.size() - 1) return minstep + 1;
+    if (numAble[i] >= nums.size() - 1)
+      return minstep + 1;
     vector<int> iable{};
     int minus = 0, max = numAble[i], maxidx = i;
     for (int j = numAble[i]; j > i; j--) {

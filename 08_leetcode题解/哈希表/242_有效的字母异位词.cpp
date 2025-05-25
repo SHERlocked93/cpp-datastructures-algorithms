@@ -17,7 +17,8 @@ bool isAnagram(string s, string t) {
   std::for_each(t.cbegin(), t.cend(), [&charTimes](char c) { charTimes[c - 'a']--; });
 
   for (int val : charTimes) {
-    if (val) return false;
+    if (val)
+      return false;
   }
   return true;
 }

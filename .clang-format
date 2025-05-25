@@ -14,7 +14,7 @@ BasedOnStyle: Google
 #AllowShortBlocksOnASingleLine: Empty
 #AllowShortCaseLabelsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Inline
-#AllowShortIfStatementsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: false
 AllowShortLambdasOnASingleLine: Inline
 #AllowShortLoopsOnASingleLine: false
 #AlwaysBreakAfterReturnType: None

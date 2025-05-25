@@ -9,9 +9,7 @@
 
 using namespace std;
 
-int maxSubArray(vector<int>& nums) {
-
-}
+int maxSubArray(vector<int>& nums) {}
 
 int main() {
   vector<int> g{-2, 1, -3, 4, -1, 2, 1, -5, 4};

@@ -16,7 +16,8 @@ int maxProfit(vector<int>& prices) {
 
   int sum = 0;
   for (int i = 0; i < nums.size(); i++) {
-    if (nums[i] < 0)continue;
+    if (nums[i] < 0)
+      continue;
     sum += nums[i];
   }
 
@@ -24,7 +25,7 @@ int maxProfit(vector<int>& prices) {
 }
 
 int main() {
-  vector<int> nums{7,1,5,3,6,4};
+  vector<int> nums{7, 1, 5, 3, 6, 4};
   const auto res = maxProfit(nums);
   cout << res;
 }

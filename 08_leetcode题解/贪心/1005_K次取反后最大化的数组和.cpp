@@ -14,7 +14,8 @@ int largestSumAfterKNegations(vector<int>& nums, int k) {
   sort(nums.begin(), nums.end());
   int minNum = 0;
   for_each(nums.begin(), nums.end(), [&minNum](int i) {
-    if (i < 0) minNum++;
+    if (i < 0)
+      minNum++;
   });
   const int last = k - minNum;
   for (int i = 0; i < min(k, minNum); i++) {

@@ -24,7 +24,8 @@ class MyLinkedList {
   MyLinkedList() {}
 
   int get(int index) {
-    if (index > size - 1) return -1;
+    if (index > size - 1)
+      return -1;
     ListNode* curr = vhead;
     while (index-- && curr->next) {
       curr = curr->next;
@@ -33,14 +34,16 @@ class MyLinkedList {
   }
 
   void addAtHead(int val) {
-    if (!vhead) vhead = new ListNode(0);
+    if (!vhead)
+      vhead = new ListNode(0);
     const auto oldNext = vhead->next;
     vhead->next = new ListNode(val, oldNext);
     size++;
   }
 
   void addAtTail(int val) {
-    if (!vhead) vhead = new ListNode(0);
+    if (!vhead)
+      vhead = new ListNode(0);
     ListNode* curr = vhead;
     while (curr->next) {
       curr = curr->next;
@@ -53,7 +56,8 @@ class MyLinkedList {
   void addAtIndex(int index, int val) {
     if (!vhead) {
       vhead = new ListNode(0);
-      if (index == 0) return addAtHead(val);
+      if (index == 0)
+        return addAtHead(val);
       return;
     }
 
@@ -61,19 +65,22 @@ class MyLinkedList {
     while (index-- && curr->next) {
       curr = curr->next;
     }
-    if (index >= 0) return;
+    if (index >= 0)
+      return;
     size++;
     const auto newNode = new ListNode(val, curr->next);
     curr->next = newNode;
   }
 
   void deleteAtIndex(int index) {
-    if (index > size - 1) return;
+    if (index > size - 1)
+      return;
     ListNode* curr = vhead;
     while (index-- && curr->next) {
       curr = curr->next;
     }
-    if (index >= 0) return;
+    if (index >= 0)
+      return;
     size--;
     auto temp = curr->next;
     curr->next = curr->next->next;

@@ -27,7 +27,7 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
       while (left < right) {
         if ((long)nums[i] + nums[j] + nums[left] > target && nums[i] + nums[j] + nums[left] >= 0)  // 注意这里
           break;
-        long sum = (long)nums[left] + nums[i] + nums[j] + nums[right]; // 转long，否则-1000000000测试用例溢出
+        long sum = (long)nums[left] + nums[i] + nums[j] + nums[right];  // 转long，否则-1000000000测试用例溢出
         if (sum > target)
           right--;
         else if (sum < target) {

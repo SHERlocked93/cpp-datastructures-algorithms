@@ -9,7 +9,8 @@
 using namespace std;
 
 int jump(vector<int>& nums) {
-  if (nums.size() == 1) return true;
+  if (nums.size() == 1)
+    return true;
   vector<int> numAble{};
   for (int i = 0; i < nums.size(); i++) {
     numAble.push_back(i + nums[i]);
@@ -17,7 +18,8 @@ int jump(vector<int>& nums) {
   int max = numAble[0];
   for (int i = 0; i < nums.size() - 1; i++) {
     max = numAble[i] > max ? numAble[i] : max;
-    if (max <= i) return false;
+    if (max <= i)
+      return false;
   }
   return true;
 }

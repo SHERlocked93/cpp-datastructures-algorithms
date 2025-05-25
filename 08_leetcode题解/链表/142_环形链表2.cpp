@@ -30,7 +30,8 @@ ListNode* detectCycle(ListNode* head) {
       break;
     }
   }
-  if (!hasCycl) return NULL;
+  if (!hasCycl)
+    return NULL;
   fast = head;
   while (fast != slow) {
     fast = fast->next;

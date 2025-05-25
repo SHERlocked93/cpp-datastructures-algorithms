@@ -20,7 +20,7 @@ struct ListNode {
 
 ListNode* removeNthFromEnd(ListNode* head, int n) {
   auto vhead = new ListNode(0, head);
-  int pren = n ;
+  int pren = n;
   auto fastPtr = vhead;
 
   while (fastPtr->next && pren--) {

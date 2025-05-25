@@ -5,9 +5,7 @@
 
 using namespace std;
 
-string longestPalindrome(string s) {
-
-}
+string longestPalindrome(string s) {}
 
 int main() {
   cout << longestPalindrome("cbbd");

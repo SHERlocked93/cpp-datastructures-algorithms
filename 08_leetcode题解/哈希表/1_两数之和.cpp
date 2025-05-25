@@ -12,7 +12,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
   for (int i = 0; i < nums.size(); i++) {
     const auto resnum = target - nums[i];
-    if (map_.find(resnum) != map_.end()) return {map_[resnum], i};
+    if (map_.find(resnum) != map_.end())
+      return {map_[resnum], i};
     map_[nums[i]] = i;
   }
 

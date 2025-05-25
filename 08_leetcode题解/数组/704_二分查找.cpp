@@ -13,7 +13,8 @@ int search(vector<int>& nums, int target) {
   for (int left = 0, right = nums.size() - 1; left <= right;) {  // 区间左闭右闭，left==right也是合法条件
     int mid = left + (right - left) / 2;
     if (left == mid) {
-      if (nums[left] == target) return left;
+      if (nums[left] == target)
+        return left;
       return nums[right] == target ? right : -1;
     }
     if (nums[mid] < target)
@@ -27,7 +28,7 @@ int search(vector<int>& nums, int target) {
 }
 
 int main() {
-  vector<int> nums{-1,0,3,5,9,12};
+  vector<int> nums{-1, 0, 3, 5, 9, 12};
   const auto idx = search(nums, -1);
 
   cout << "idx:" << idx;

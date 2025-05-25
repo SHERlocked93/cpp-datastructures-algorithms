@@ -14,7 +14,8 @@ int findContentChildren(vector<int>& g, vector<int>& s) {
   sort(g.begin(), g.end());
   sort(s.begin(), s.end());
   for (int i = g.size() - 1; i >= 0 && j >= 0; i--) {
-    if (g[i] > s[j]) continue;
+    if (g[i] > s[j])
+      continue;
     res++;
     j--;
   }

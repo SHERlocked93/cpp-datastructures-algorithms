@@ -22,7 +22,8 @@ int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
       curSum = 0;      // curSum从0开始
     }
   }
-  if (totalSum < 0) return -1;  // 说明怎么走都不可能跑一圈了
+  if (totalSum < 0)
+    return -1;  // 说明怎么走都不可能跑一圈了
   return start;
 }
 

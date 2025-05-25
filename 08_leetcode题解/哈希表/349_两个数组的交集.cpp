@@ -17,7 +17,8 @@ vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
   std::for_each(nums1.cbegin(), nums1.cend(), [&numMap](int c) { numMap[c] = true; });
   unordered_set<int> res;
   std::for_each(nums2.cbegin(), nums2.cend(), [&numMap, &res](int c) {
-    if (numMap[c]) res.insert(c);
+    if (numMap[c])
+      res.insert(c);
   });
   return {res.cbegin(), res.cend()};
 }
