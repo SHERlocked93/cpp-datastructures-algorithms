@@ -56,13 +56,14 @@ unordered_map、unordered_set底层实现是哈希表。
 ### BFS 与 DFS
 
 深度优先遍历 DFS（按中间节点的位置）
-- 前序遍历：中左右
-- 中序遍历：左中右
-- 后序遍历：左右中
+- [前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/description/)：中左右
+- [中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/)：左中右
+- [后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)：左右中
+
+遍历方式：
+- 递归方式：按中左右方式 traverse；
+- 非递归方式：以前序遍历为例，使用栈的先入后出方式，遍历中间元素后，先入栈右元素，再入栈左元素，这样出栈的时候即可先处理左元素再处理右元素，处理左元素的时候把它当作中元素，继续进行入栈操作，以此循环；
 
 广度优先遍历 BFS
 - 层次遍历
 
-```c++
-
-```
