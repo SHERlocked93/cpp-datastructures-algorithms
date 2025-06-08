@@ -5,16 +5,19 @@
 #include <string>
 #include <vector>
 
-inline std::string bytes2hexStr(const unsigned char* vec, int length, bool withSpace = true) {
+template <typename T>
+std::string bytes2hexStr(const T* vec, int length, bool withSpace = true) {
   std::stringstream ss;
   for (int i = 0; i < length; i++) {
     ss << std::uppercase << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(vec[i]);
-    if (withSpace) ss << " ";
+    if (withSpace)
+      ss << " ";
   }
   return ss.str();
 }
 
-inline std::string bytes2hexStr(const std::vector<unsigned char>& vec, bool withSpace = true) {
+template <typename T>
+std::string bytes2hexStr(const std::vector<T>& vec, bool withSpace = true) {
   return bytes2hexStr(vec.data(), vec.size(), withSpace);
 }
 
@@ -23,7 +26,8 @@ std::string int2str(const std::vector<T>& vec, bool withSpace = true) {
   std::stringstream ss;
   for (int i = 0; i < vec.size(); i++) {
     ss << static_cast<int>(vec[i]);
-    if (withSpace) ss << " ";
+    if (withSpace)
+      ss << " ";
   }
   return ss.str();
 }
@@ -33,7 +37,8 @@ std::string int2str(const std::vector<T>& vec, int len, bool withSpace = true) {
   std::stringstream ss;
   for (int i = 0; i < len; i++) {
     ss << static_cast<int>(vec[i]);
-    if (withSpace) ss << " ";
+    if (withSpace)
+      ss << " ";
   }
   return ss.str();
 }
@@ -54,4 +59,3 @@ struct CListNode {
 
   explicit CListNode(T v_) : val(v_) {}
 };
-
