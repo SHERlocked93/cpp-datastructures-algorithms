@@ -46,8 +46,9 @@ bool repeatedSubstringPattern1(string s) {
 // KMP
 bool repeatedSubstringPattern2(string s) {
   int j = 0;
-  vector<int> next(s.size(), 0);
-  for (int i = 1; i < s.size(); ++i) {
+  auto len = s.size();
+  vector<int> next(len, 0);
+  for (int i = 1; i < len; ++i) {
     while (j > 0 && s[i] != s[j]) {
       j = next[j - 1];
     }
@@ -55,11 +56,11 @@ bool repeatedSubstringPattern2(string s) {
       j++;
     next[i] = j;
   }
-  auto needle = s.substr(0, s.size() - next[s.size() - 1]);
+  int prefixLen = next.back();
 
-  return s.size() % needle.size() == 0;
+  return prefixLen > 0 && len % (len - prefixLen) == 0;
 }
 
 int main() {
-  cout << " : " << (repeatedSubstringPattern2("abcabcabca") ? "true" : "false");
+  cout << " : " << (repeatedSubstringPattern2("abac") ? "true" : "false");
 }
