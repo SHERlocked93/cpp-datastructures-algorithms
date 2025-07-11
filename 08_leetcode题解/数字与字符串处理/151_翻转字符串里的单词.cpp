@@ -14,7 +14,7 @@ string reverseWords(string s) {
 
   int i = 0;
   while (i < s.size()) {
-    while (i < s.size() && s[i] == ' ') ++i;
+    while (i < s.size() && s[i] == ' ') ++i;  // 移除前面的
     if (i >= s.size())
       break;
 
